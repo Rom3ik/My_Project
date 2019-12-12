@@ -9,6 +9,12 @@ public class CinemaPlusTicketWindow {
     private User user;
     private Ticket ticket;
 
+    private void getPaymentResult(){
+        System.out.println("You successfully buyed a ticket for " + ticket.getMovieName() + " movie");
+        System.out.println("Money left: " + user.getCash() + " $");
+        System.out.println("Ticket's have: " + user.getTicketCount() + " tickets");
+    }
+
     private boolean ifTicketsExists() {
         if (ticket.getTicketCount() > 0) {
             return true;
@@ -32,7 +38,7 @@ public class CinemaPlusTicketWindow {
     public void sellTicket() {
         if (isAdult() && ifTicketsExists()) {
             user.buyTicket(ticket);
-            System.out.println("You successfully buyed a ticket for " + ticket.getMovieName() + " movie");
+            getPaymentResult();
         } else {
             throw new AgeException();
         }

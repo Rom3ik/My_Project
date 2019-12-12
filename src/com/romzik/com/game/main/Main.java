@@ -9,7 +9,7 @@ public class Main {
         User user2 = new User2("Bill", 14, 15);
         Ticket ticket1 = new Ticket_1("Joker 2019", 25, 18,2000);
         Ticket ticket2 = new Ticket_2("Ace age 3", 10, 13,1000);
-        CinemaPlusTicketWindow cinemaplus = new CinemaPlusTicketWindow(user2, ticket2);
+        CinemaPlusTicketWindow cinemaplus = new CinemaPlusTicketWindow(user1, ticket2);
         cinemaplus.sellTicket();
 
     }
