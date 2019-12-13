@@ -2,18 +2,18 @@ package com.romzik.com.game.objects;
 
 import com.romzik.com.game.classes.AgeException;
 import com.romzik.com.game.classes.Ticket;
-import com.romzik.com.game.classes.TicketSoldException;
 import com.romzik.com.game.classes.User;
 
 public class CinemaPlusTicketWindow {
     private User user;
     private Ticket ticket;
 
-    private void getPaymentResult(){
-        System.out.println("You successfully buyed a ticket for " + ticket.getMovieName() + " movie");
-        System.out.println("Money left: " + user.getCash() + " $");
-        System.out.println("Ticket's have: " + user.getTicketCount() + " tickets");
+    private void giveTicketReceipt(){
+        System.out.println("You successfully buyed a ticket for " + ticket.getMovieName() + " movie \n");
+        System.out.println("Your receipt: ");
+        System.out.printf("Movie name: %s %nTicket id: %d %nTicket price: %d$ %nApproval code: %s", ticket.getMovieName(), ticket.getTicketId(), ticket.getTicketPrice(), ticket.getTicketKey());
     }
+
 
     private boolean ifTicketsExists() {
         if (ticket.getTicketCount() > 0) {
@@ -38,7 +38,7 @@ public class CinemaPlusTicketWindow {
     public void sellTicket() {
         if (isAdult() && ifTicketsExists()) {
             user.buyTicket(ticket);
-            getPaymentResult();
+            giveTicketReceipt();
         } else {
             throw new AgeException();
         }

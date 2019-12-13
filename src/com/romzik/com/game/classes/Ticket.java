@@ -1,10 +1,13 @@
 package com.romzik.com.game.classes;
 
+import java.util.Random;
+
 public class Ticket {
     private int ticketPrice;
     private String movieName;
     private int movieRating;
     private int ticketCount;
+    private long ticketKey;
 
     protected Ticket(String movieName, int ticketPrice, int movieRating, int ticketCount) {
         this.ticketPrice = ticketPrice;
@@ -25,11 +28,24 @@ public class Ticket {
         return movieRating;
     }
 
-    public void setTicketPrice(int ticketPrice) {
+    private void setTicketPrice(int ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
 
     public int getTicketCount() {
         return ticketCount;
     }
+
+    public int getTicketId() {
+        int ticketId;
+        Random rand = new Random();
+        ticketId = rand.nextInt(40000 - 10000 + 1) + 100000;
+        return ticketId;
+    }
+
+    public long getTicketKey() {
+        ticketKey = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
+        return ticketKey;
+    }
+
 }
