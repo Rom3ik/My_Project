@@ -4,6 +4,7 @@ import com.romzik.com.game.classes.AgeException;
 import com.romzik.com.game.classes.Ticket;
 import com.romzik.com.game.classes.User;
 
+
 public class CinemaPlusTicketWindow {
     private User user;
     private Ticket ticket;
@@ -11,7 +12,7 @@ public class CinemaPlusTicketWindow {
     private void giveTicketReceipt(){
         System.out.println("You successfully buyed a ticket for " + ticket.getMovieName() + " movie \n");
         System.out.println("Your receipt: ");
-        System.out.printf("Movie name: %s %nTicket id: %d %nTicket price: %d$ %nApproval code: %s", ticket.getMovieName(), ticket.getTicketId(), ticket.getTicketPrice(), ticket.getTicketKey());
+        System.out.printf("Movie name: %s %nTicket id: %d %nTicket price: %d$", ticket.getMovieName(), ticket.getTicketId(), ticket.getTicketPrice());
     }
 
 

@@ -7,7 +7,6 @@ public class Ticket {
     private String movieName;
     private int movieRating;
     private int ticketCount;
-    private long ticketKey;
 
     protected Ticket(String movieName, int ticketPrice, int movieRating, int ticketCount) {
         this.ticketPrice = ticketPrice;
@@ -41,11 +40,6 @@ public class Ticket {
         Random rand = new Random();
         ticketId = rand.nextInt(40000 - 10000 + 1) + 100000;
         return ticketId;
-    }
-
-    public long getTicketKey() {
-        ticketKey = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
-        return ticketKey;
     }
 
 }
