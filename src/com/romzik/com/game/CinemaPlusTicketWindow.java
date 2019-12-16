@@ -1,8 +1,4 @@
-package com.romzik.com.game.objects;
-
-import com.romzik.com.game.classes.Ticket;
-import com.romzik.com.game.classes.TicketBuyException;
-import com.romzik.com.game.classes.User;
+package com.romzik.com.game;
 
 
 public class CinemaPlusTicketWindow {
@@ -39,8 +35,6 @@ public class CinemaPlusTicketWindow {
     public void sellTicket() {
         if (!isAdult()) {
             throw new TicketBuyException("Your age is under movie's rating");
-
-
         }
         else if(!ifTicketsExists()){
             throw new TicketBuyException("No tickets left: " + "Ticket's count: " + ticket.getTicketCount());

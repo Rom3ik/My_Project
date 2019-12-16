@@ -1,4 +1,4 @@
-package com.romzik.com.game.classes;
+package com.romzik.com.game;
 
 import java.util.Random;
 

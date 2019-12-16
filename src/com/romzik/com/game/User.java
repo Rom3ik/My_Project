@@ -1,4 +1,5 @@
-package com.romzik.com.game.classes;
+package com.romzik.com.game;
+
 
 public class User {
 
