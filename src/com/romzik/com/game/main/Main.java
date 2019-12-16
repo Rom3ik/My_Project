@@ -5,11 +5,11 @@ import com.romzik.com.game.objects.*;
 
 public class Main {
     public static void main(String[] args) {
-        User user1 = new User1("John", 18, 55);
-        User user2 = new User2("Bill", 14, 15);
-        Ticket ticket1 = new Ticket_1("Joker 2019", 25, 18,2000);
-        Ticket ticket2 = new Ticket_2("Ace age 3", 10, 13,1000);
-        CinemaPlusTicketWindow cinemaplus = new CinemaPlusTicketWindow(user1, ticket1);
+        User user1 = new User("John", 18, 30);
+        User user2 = new User("Bill", 14, 20);
+        Ticket ticket1 = new Ticket("Joker 2019", 25, 18,1000);
+        Ticket ticket2 = new Ticket("Ace Age 3", 15, 13,1000);
+        CinemaPlusTicketWindow cinemaplus = new CinemaPlusTicketWindow(user1, ticket2);
         cinemaplus.sellTicket();
     }
 }

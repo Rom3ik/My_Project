@@ -17,8 +17,6 @@ public class User {
         if (cash >= ticket.getTicketPrice()) {
             ticketCount++;
             cash -= ticket.getTicketPrice();
-        } else {
-            throw new BuyTicketException();
         }
 
     }

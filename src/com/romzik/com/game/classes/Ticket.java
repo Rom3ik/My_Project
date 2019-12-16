@@ -8,7 +8,7 @@ public class Ticket {
     private int movieRating;
     private int ticketCount;
 
-    protected Ticket(String movieName, int ticketPrice, int movieRating, int ticketCount) {
+    public Ticket(String movieName, int ticketPrice, int movieRating, int ticketCount) {
         this.ticketPrice = ticketPrice;
         this.movieName = movieName;
         this.movieRating = movieRating;
